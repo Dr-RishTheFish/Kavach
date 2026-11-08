@@ -7,6 +7,7 @@ struct KavachApp: App {
 
 struct AppRootView: View {
     @State private var selection = 0
+    @StateObject private var settings = AppSettings()
 
     var body: some View {
         TabView(selection: $selection) {
@@ -20,6 +21,7 @@ struct AppRootView: View {
                 .tabItem { Label("Settings", systemImage: "slider.horizontal.3") }.tag(3)
         }
         .tint(Theme.accent)
+        .environmentObject(settings)
     }
 }
 

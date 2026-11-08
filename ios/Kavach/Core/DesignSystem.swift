@@ -82,6 +82,7 @@ struct RiskScoreCard: View {
     var body: some View {
         ContentCard {
             if assessment.source == .mock { DemoBanner() }
+            else { Label(assessment.source.displayTitle, systemImage: "sparkles").font(.headline) }
             ViewThatFits(in: .horizontal) {
                 HStack(alignment: .center) { score; Spacer(); RiskBadge(level: assessment.riskLevel) }
                 VStack(alignment: .leading, spacing: 12) { score; RiskBadge(level: assessment.riskLevel) }
@@ -90,7 +91,7 @@ struct RiskScoreCard: View {
             Text("A heuristic risk score, not a fraud probability or a guarantee of safety.")
                 .font(.caption).foregroundStyle(.secondary)
             if assessment.requiresHumanReview {
-                Label("Needs a closer look. No human review has taken place.", systemImage: "person.crop.circle.badge.questionmark")
+                Label("Additional verification recommended", systemImage: "person.crop.circle.badge.questionmark")
                     .font(.subheadline)
             }
         }

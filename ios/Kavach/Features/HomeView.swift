@@ -13,7 +13,7 @@ struct HomeView: View {
                 Text("When a call or message feels off, take a breath and check before you act.")
                     .foregroundStyle(.secondary)
                 ActionButton(title: "Explore a sample", symbol: "arrow.up.right", action: openAnalyze)
-                Label("Offline demo · No monitoring is active", systemImage: "iphone")
+                Label("Manual analysis · No monitoring is active", systemImage: "iphone")
                     .font(.caption).foregroundStyle(.secondary)
             }
             SectionHeading(title: "A closer look", subtitle: "Featured sample assessment")
@@ -30,11 +30,11 @@ struct HomeView: View {
             }
             SectionHeading(title: "Coming to kavach", subtitle: "These features are not connected yet")
             ContentCard {
-                Label("AI-assisted analysis", systemImage: "sparkles")
-                Text("Live analysis will arrive after backend integration.").font(.subheadline).foregroundStyle(.secondary)
-                Divider()
                 Label("Your trusted circle", systemImage: "person.2")
-                Text("Share a redacted summary only when you choose.").font(.subheadline).foregroundStyle(.secondary)
+                Text("Invitations and private alerts are coming later.").font(.subheadline).foregroundStyle(.secondary)
+                Divider()
+                Label("Saved reports", systemImage: "tray")
+                Text("Current assessments stay in this session only.").font(.subheadline).foregroundStyle(.secondary)
             }
         }
         .navigationTitle("kavach")

@@ -28,6 +28,7 @@ config = config_group.new_file('App.xcconfig')
   end
 end
 app.build_configurations.each do |c|
+  c.build_settings['INFOPLIST_FILE'] = "Configuration/Info-#{c.name}.plist"
   c.build_settings.merge!({
     'INFOPLIST_KEY_CFBundleDisplayName' => 'kavach',
     'INFOPLIST_KEY_UILaunchScreen_Generation' => 'YES',
