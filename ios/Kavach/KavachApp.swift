@@ -8,6 +8,7 @@ struct KavachApp: App {
 struct AppRootView: View {
     @State private var selection = 0
     @StateObject private var settings = AppSettings()
+    @StateObject private var finalDemo = FinalDemoStore()
 
     var body: some View {
         TabView(selection: $selection) {
@@ -22,6 +23,7 @@ struct AppRootView: View {
         }
         .tint(Theme.accent)
         .environmentObject(settings)
+        .environmentObject(finalDemo)
     }
 }
 

@@ -3,6 +3,7 @@ import SwiftUI
 struct CircleView: View {
     var body: some View {
         Screen {
+            NavigationLink("Explore demo circles and reports") { FinalWorkspaceView() }
             ContentCard {
                 Image(systemName: "person.2.circle").font(.system(size: 64)).foregroundStyle(Theme.accent).accessibilityHidden(true)
                 Text("Looking out for\neach other.").font(.system(.largeTitle, design: .rounded, weight: .bold))

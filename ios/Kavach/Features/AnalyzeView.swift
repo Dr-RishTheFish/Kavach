@@ -93,6 +93,9 @@ struct AnalysisResultView: View {
     let requestedMode: AnalysisMode
     var body: some View {
         RiskScoreCard(assessment: assessment)
+        NavigationLink("Save a demo private report") { SaveDemoReportView(assessment: assessment) }
+        Text("The report demo is stored only in this app session. It does not save to the backend.")
+            .font(.caption).foregroundStyle(.secondary)
         if requestedMode == .live && assessment.source == .mock {
             Text("Your backend returned a simulated assessment. This is not live NVIDIA analysis.")
                 .font(.headline).accessibilityIdentifier("liveReturnedMock")

@@ -7,6 +7,11 @@ struct SettingsView: View {
 
     var body: some View {
         Form {
+            Section("Accounts, reports and circles") {
+                NavigationLink("Explore the final UI demo") { FinalWorkspaceView() }
+                Text("Demo accounts and reports stay in memory. Connected accounts, push alerts and Messages require backend provisioning.")
+                    .font(.caption).foregroundStyle(.secondary)
+            }
             Section("Analysis service") {
                 Picker("Service", selection: $settings.configuration.mode) {
                     ForEach(AnalysisMode.allCases, id: \.self) { Text($0.title).tag($0) }

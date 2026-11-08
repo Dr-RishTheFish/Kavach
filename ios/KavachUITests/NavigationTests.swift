@@ -1,6 +1,14 @@
 import XCTest
 
 final class NavigationTests: XCTestCase {
+    func testFinalWorkspaceIsExplicitDemo() {
+        let app = XCUIApplication()
+        app.launchArguments = ["-analysisMode", "mock"]
+        app.launch()
+        app.tabBars.buttons["Settings"].tap()
+        app.buttons["Explore the final UI demo"].tap()
+        XCTAssertTrue(app.navigationBars["Demo workspace"].waitForExistence(timeout: 5))
+    }
     func testLiveMockResponseDisclosure() async throws {
         // Opt-in local integration: run the existing mock backend on loopback port 3101.
         let health = URL(string: "http://127.0.0.1:3101/health")!
