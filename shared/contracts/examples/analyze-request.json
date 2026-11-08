@@ -1,0 +1,6 @@
+{
+  "kind": "call",
+  "content": "A caller claimed to be my bank and urgently requested a transfer.",
+  "phoneNumber": "+12025550123",
+  "context": "I did not initiate the call."
+}

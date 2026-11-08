@@ -6,5 +6,7 @@
 import { type Infer as __Infer } from "spacetimedb";
 
 // Import all reducer arg schemas
+import SetDevelopmentStatusReducer from "../set_development_status_reducer";
 
+export type SetDevelopmentStatusParams = __Infer<typeof SetDevelopmentStatusReducer>;
 

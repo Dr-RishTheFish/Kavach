@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kavach.local/contracts/v0/analyze-request.schema.json",
+  "title": "AnalyzeRequest",
+  "description": "Body of POST /api/v1/analyze (contract v0.1.0). The server trims string fields before validating; empty optional strings are treated as absent. `content` is untrusted data, never instructions.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "content"],
+  "properties": {
+    "kind": {
+      "type": "string",
+      "enum": ["call", "sms", "message", "url"]
+    },
+    "content": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 5000,
+      "description": "1-5000 Unicode characters after trimming."
+    },
+    "phoneNumber": {
+      "type": "string",
+      "pattern": "^\\+[1-9][0-9]{0,14}$",
+      "description": "E.164-like: '+' then up to 15 digits, no leading zero. Use fictional numbers in demos."
+    },
+    "context": {
+      "type": "string",
+      "maxLength": 1000
+    }
+  }
+}

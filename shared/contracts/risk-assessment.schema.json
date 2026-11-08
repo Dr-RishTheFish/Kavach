@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kavach.local/contracts/v0/risk-assessment.schema.json",
+  "title": "RiskAssessment",
+  "description": "200 response of POST /api/v1/analyze (contract v0.1.0). riskLevel is derived from riskScore: 0-24 low, 25-49 guarded, 50-74 high, 75-100 critical. If source is 'mock' the client must show DEMO / SIMULATED ASSESSMENT.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "analysisId", "kind", "riskScore", "riskLevel", "summary", "signals",
+    "recommendedActions", "source", "requiresHumanReview", "analyzedAt"
+  ],
+  "properties": {
+    "analysisId": { "type": "string", "format": "uuid", "description": "Opaque server-generated id. Not a saved report id." },
+    "kind": { "type": "string", "enum": ["call", "sms", "message", "url"] },
+    "riskScore": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "riskLevel": { "type": "string", "enum": ["low", "guarded", "high", "critical"] },
+    "summary": { "type": "string", "minLength": 1 },
+    "signals": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "recommendedActions": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "source": { "type": "string", "enum": ["mock", "nvidia"] },
+    "requiresHumanReview": { "type": "boolean" },
+    "analyzedAt": { "type": "string", "format": "date-time" }
+  },
+  "allOf": [
+    { "if": { "properties": { "riskScore": { "type": "integer", "maximum": 24 } } }, "then": { "properties": { "riskLevel": { "const": "low" } } } },
+    { "if": { "properties": { "riskScore": { "type": "integer", "minimum": 25, "maximum": 49 } } }, "then": { "properties": { "riskLevel": { "const": "guarded" } } } },
+    { "if": { "properties": { "riskScore": { "type": "integer", "minimum": 50, "maximum": 74 } } }, "then": { "properties": { "riskLevel": { "const": "high" } } } },
+    { "if": { "properties": { "riskScore": { "type": "integer", "minimum": 75 } } }, "then": { "properties": { "riskLevel": { "const": "critical" } } } }
+  ]
+}

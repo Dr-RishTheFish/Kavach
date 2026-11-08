@@ -6,8 +6,9 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build": "spacetime build",
-    "publish:local": "spacetime publish --server local kavach",
-    "generate": "spacetime generate --lang typescript --out-dir ../backend/photon-worker/src/module_bindings"
+    "publish:local": "spacetime publish --server local kavach-dev -y --no-config",
+    "generate": "spacetime generate --lang typescript --out-dir ../agent/photon-worker/src/module_bindings",
+    "call:local": "spacetime call --server local kavach-dev --no-config set_development_status"
   },
   "dependencies": {
     "spacetimedb": "2.14.1"

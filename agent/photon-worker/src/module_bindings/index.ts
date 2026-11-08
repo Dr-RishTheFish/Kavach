@@ -34,19 +34,33 @@ import {
 } from "spacetimedb";
 
 // Import all reducer arg schemas
+import SetDevelopmentStatusReducer from "./set_development_status_reducer";
 
 // Import all procedure arg schemas
 
 // Import all table schema definitions
+import DevelopmentStatusRow from "./development_status_table";
 
 /** Type-only namespace exports for generated type groups. */
 
 /** The schema information for all tables in this module. This is defined the same was as the tables would have been defined in the server. */
 const tablesSchema = __schema({
+  developmentStatus: __table({
+    name: 'development_status',
+    indexes: [
+      { accessor: 'component', name: 'development_status_component_idx_btree', algorithm: 'btree', columns: [
+        'component',
+      ] },
+    ],
+    constraints: [
+      { name: 'development_status_component_key', constraint: 'unique', columns: ['component'] },
+    ],
+  }, DevelopmentStatusRow),
 });
 
 /** The schema information for all reducers in this module. This is defined the same way as the reducers would have been defined in the server, except the body of the reducer is omitted in code generation. */
 const reducersSchema = __reducers(
+  __reducerSchema("set_development_status", SetDevelopmentStatusReducer),
 );
 
 /** The schema information for all procedures in this module. This is defined the same way as the procedures would have been defined in the server. */

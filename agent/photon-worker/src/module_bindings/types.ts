@@ -10,3 +10,10 @@ import {
   type Infer as __Infer,
 } from "spacetimedb";
 
+export const DevelopmentStatus = __t.object("DevelopmentStatus", {
+  component: __t.string(),
+  status: __t.string(),
+  updatedAt: __t.timestamp(),
+});
+export type DevelopmentStatus = __Infer<typeof DevelopmentStatus>;
+

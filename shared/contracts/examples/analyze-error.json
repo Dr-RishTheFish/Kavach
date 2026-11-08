@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Please provide a supported kind and non-empty content.",
+    "requestId": "01JEXAMPLE000000000000001"
+  }
+}

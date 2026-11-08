@@ -1,0 +1,18 @@
+{
+  "analysisId": "00000000-0000-4000-8000-000000000001",
+  "kind": "call",
+  "riskScore": 92,
+  "riskLevel": "critical",
+  "summary": "This description contains signs of a possible bank impersonation scam.",
+  "signals": [
+    "The caller claimed to represent a financial institution.",
+    "The caller pressured the recipient to act immediately."
+  ],
+  "recommendedActions": [
+    "Do not transfer money or share a one-time code.",
+    "Contact your bank using a phone number you independently verify."
+  ],
+  "source": "mock",
+  "requiresHumanReview": false,
+  "analyzedAt": "2026-11-08T08:00:00.000Z"
+}

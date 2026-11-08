@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kavach.local/contracts/v0/health.schema.json",
+  "title": "Health",
+  "description": "200 response of GET /health (contract v0.1.0). Says only that the API process is alive; it does not check NVIDIA, Photon or SpacetimeDB.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["status", "service", "version", "time"],
+  "properties": {
+    "status": { "const": "ok" },
+    "service": { "const": "kavach-api" },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "time": { "type": "string", "format": "date-time" }
+  }
+}
