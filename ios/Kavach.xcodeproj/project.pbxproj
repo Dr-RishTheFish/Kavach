@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E9792C06E7AF59D1AE1B10A /* DemoScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98D4E84010D40282DD6BBA /* DemoScenario.swift */; };
+		42D5C99B986EE3D809F50C9D /* AnalysisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8519A6DCD386D8D5C30A513 /* AnalysisService.swift */; };
+		4768AE84B5C7D3BEDD5EE425 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF36923C3BD8B926FBB1B82 /* Foundation.framework */; };
+		4DEC4638689834D526D66BB6 /* HTTPAnalysisServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6498CA3FF7D5FA3C780D9788 /* HTTPAnalysisServiceTests.swift */; };
+		4F8205F764A9663291C57D43 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED23E0FB97EE1F2DB014988E /* HomeView.swift */; };
+		63E5BFFA524C66438C9FB8E2 /* ContractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D79AE7280F50B134B2F65C7 /* ContractTests.swift */; };
+		6E54C4B7CA622A6B80F6B138 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741A21AA33C3B8275D5D99EF /* Models.swift */; };
+		6E89A1D5CD7DFE5327114400 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF36923C3BD8B926FBB1B82 /* Foundation.framework */; };
+		77C9CF2007184BC865C5A283 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B342C4EB15A5F07A2BAB473 /* SettingsView.swift */; };
+		7C783DDA9E16E83A6B4A91B0 /* KavachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F8431D52200DFB11BCA31B /* KavachApp.swift */; };
+		9A3ACD98407C1F1BC1FAC9A0 /* assessment.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B45880F7F66C6836FEDE1C9 /* assessment.json */; };
+		9DF8B476026C09BCBAC9C6F6 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D283A5AD253F772C076B3 /* CircleView.swift */; };
+		A6AC51410805E9EA884B4901 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF36923C3BD8B926FBB1B82 /* Foundation.framework */; };
+		A6BFA1628DCFACC62907A871 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9F359B9AD6A19F3F8A44F /* DesignSystem.swift */; };
+		CD9E10E064EA2E452CA72B4B /* NavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FE2907E341A2A7D8BA01B3 /* NavigationTests.swift */; };
+		ED65B3384A2DD946C08DB505 /* AnalyzeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793D0158377F424A13A2A2A1 /* AnalyzeView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11D49BC06012FAA2EC54281A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81B50B90782C90694701B0A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63852CBF293AFF72CB539C75;
+			remoteInfo = Kavach;
+		};
+		AC5697B94F881544433CA649 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81B50B90782C90694701B0A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63852CBF293AFF72CB539C75;
+			remoteInfo = Kavach;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B45880F7F66C6836FEDE1C9 /* assessment.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = assessment.json; sourceTree = "<group>"; };
+		27F8431D52200DFB11BCA31B /* KavachApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KavachApp.swift; sourceTree = "<group>"; };
+		2C4D283A5AD253F772C076B3 /* CircleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircleView.swift; path = Features/CircleView.swift; sourceTree = "<group>"; };
+		2D79AE7280F50B134B2F65C7 /* ContractTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContractTests.swift; sourceTree = "<group>"; };
+		36EC609929AA6613492ED95D /* App.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = App.xcconfig; sourceTree = "<group>"; };
+		3B342C4EB15A5F07A2BAB473 /* SettingsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = Features/SettingsView.swift; sourceTree = "<group>"; };
+		3DF36923C3BD8B926FBB1B82 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4A1DD16CF685D091DA97696E /* KavachUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KavachUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6498CA3FF7D5FA3C780D9788 /* HTTPAnalysisServiceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTTPAnalysisServiceTests.swift; sourceTree = "<group>"; };
+		741A21AA33C3B8275D5D99EF /* Models.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Models.swift; path = Core/Models.swift; sourceTree = "<group>"; };
+		74FE2907E341A2A7D8BA01B3 /* NavigationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NavigationTests.swift; sourceTree = "<group>"; };
+		793D0158377F424A13A2A2A1 /* AnalyzeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnalyzeView.swift; path = Features/AnalyzeView.swift; sourceTree = "<group>"; };
+		B9E30C6468AF3878D8EBA511 /* Kavach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kavach.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF9F359B9AD6A19F3F8A44F /* DesignSystem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignSystem.swift; path = Core/DesignSystem.swift; sourceTree = "<group>"; };
+		D9338E969766A92664AE7FA2 /* KavachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KavachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED23E0FB97EE1F2DB014988E /* HomeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = Features/HomeView.swift; sourceTree = "<group>"; };
+		F8519A6DCD386D8D5C30A513 /* AnalysisService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnalysisService.swift; path = Core/AnalysisService.swift; sourceTree = "<group>"; };
+		FA98D4E84010D40282DD6BBA /* DemoScenario.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DemoScenario.swift; path = Core/DemoScenario.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1EE8713B5ABEB78E47DFE08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E89A1D5CD7DFE5327114400 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCE0AC4DAB1EC7CEC30FAA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4768AE84B5C7D3BEDD5EE425 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F94517D35AC3B4DC3E17FA71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6AC51410805E9EA884B4901 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BC236640AB187A26960CE28 /* KavachUITests */ = {
+			isa = PBXGroup;
+			children = (
+				74FE2907E341A2A7D8BA01B3 /* NavigationTests.swift */,
+			);
+			path = KavachUITests;
+			sourceTree = "<group>";
+		};
+		23A3EC1AF0CB39A52133F387 /* Kavach */ = {
+			isa = PBXGroup;
+			children = (
+				F8519A6DCD386D8D5C30A513 /* AnalysisService.swift */,
+				FA98D4E84010D40282DD6BBA /* DemoScenario.swift */,
+				CDF9F359B9AD6A19F3F8A44F /* DesignSystem.swift */,
+				741A21AA33C3B8275D5D99EF /* Models.swift */,
+				793D0158377F424A13A2A2A1 /* AnalyzeView.swift */,
+				2C4D283A5AD253F772C076B3 /* CircleView.swift */,
+				ED23E0FB97EE1F2DB014988E /* HomeView.swift */,
+				3B342C4EB15A5F07A2BAB473 /* SettingsView.swift */,
+				27F8431D52200DFB11BCA31B /* KavachApp.swift */,
+			);
+			path = Kavach;
+			sourceTree = "<group>";
+		};
+		2EB480BF0490C3B4823E2BCC /* KavachTests */ = {
+			isa = PBXGroup;
+			children = (
+				2D79AE7280F50B134B2F65C7 /* ContractTests.swift */,
+				BEFE152E14B28A48D4A6CB19 /* Fixtures */,
+				6498CA3FF7D5FA3C780D9788 /* HTTPAnalysisServiceTests.swift */,
+			);
+			path = KavachTests;
+			sourceTree = "<group>";
+		};
+		6B58F26B000E52B3F0E8ECAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9E30C6468AF3878D8EBA511 /* Kavach.app */,
+				D9338E969766A92664AE7FA2 /* KavachTests.xctest */,
+				4A1DD16CF685D091DA97696E /* KavachUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E2A413A535C823A3575DA31 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				36EC609929AA6613492ED95D /* App.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		79B86AB1822601F875823EBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C92531F70527681EABD060F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C92531F70527681EABD060F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3DF36923C3BD8B926FBB1B82 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		BEFE152E14B28A48D4A6CB19 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				0B45880F7F66C6836FEDE1C9 /* assessment.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		C599FC051EADE58DE2408687 = {
+			isa = PBXGroup;
+			children = (
+				6B58F26B000E52B3F0E8ECAB /* Products */,
+				79B86AB1822601F875823EBF /* Frameworks */,
+				6E2A413A535C823A3575DA31 /* Configuration */,
+				23A3EC1AF0CB39A52133F387 /* Kavach */,
+				2EB480BF0490C3B4823E2BCC /* KavachTests */,
+				0BC236640AB187A26960CE28 /* KavachUITests */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63852CBF293AFF72CB539C75 /* Kavach */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF018FFA33422C10CAE79675 /* Build configuration list for PBXNativeTarget "Kavach" */;
+			buildPhases = (
+				8FB8564258DD3503696E29FB /* Sources */,
+				DBCE0AC4DAB1EC7CEC30FAA4 /* Frameworks */,
+				43F9281B0842B10B4EBF6B2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kavach;
+			productName = Kavach;
+			productReference = B9E30C6468AF3878D8EBA511 /* Kavach.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8903F2B9BC1CEE6C5FB9AB20 /* KavachTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E858114322118582C8922349 /* Build configuration list for PBXNativeTarget "KavachTests" */;
+			buildPhases = (
+				CCEDF0AEF62150781A367106 /* Sources */,
+				B1EE8713B5ABEB78E47DFE08 /* Frameworks */,
+				57859D3F7586CDB64900AC5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A46D5E3E3A01C3310A7D8EF /* PBXTargetDependency */,
+			);
+			name = KavachTests;
+			productName = KavachTests;
+			productReference = D9338E969766A92664AE7FA2 /* KavachTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D2C9A9C53B8F372C59F82624 /* KavachUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4569E03567663D504C8AC074 /* Build configuration list for PBXNativeTarget "KavachUITests" */;
+			buildPhases = (
+				CE75686B7C22FC2771EBDD3E /* Sources */,
+				F94517D35AC3B4DC3E17FA71 /* Frameworks */,
+				2A4A804C90212BDB1C9F1BAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25DACFCD3D0E4D70DF9BEEA9 /* PBXTargetDependency */,
+			);
+			name = KavachUITests;
+			productName = KavachUITests;
+			productReference = 4A1DD16CF685D091DA97696E /* KavachUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81B50B90782C90694701B0A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					63852CBF293AFF72CB539C75 = {
+						DevelopmentTeam = L3ZM5X4NF8;
+						ProvisioningStyle = Automatic;
+					};
+					8903F2B9BC1CEE6C5FB9AB20 = {
+						ProvisioningStyle = Automatic;
+					};
+					D2C9A9C53B8F372C59F82624 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7486CB755BFD949607528DD1 /* Build configuration list for PBXProject "Kavach" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C599FC051EADE58DE2408687;
+			productRefGroup = 6B58F26B000E52B3F0E8ECAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63852CBF293AFF72CB539C75 /* Kavach */,
+				8903F2B9BC1CEE6C5FB9AB20 /* KavachTests */,
+				D2C9A9C53B8F372C59F82624 /* KavachUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A4A804C90212BDB1C9F1BAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43F9281B0842B10B4EBF6B2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57859D3F7586CDB64900AC5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A3ACD98407C1F1BC1FAC9A0 /* assessment.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FB8564258DD3503696E29FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42D5C99B986EE3D809F50C9D /* AnalysisService.swift in Sources */,
+				1E9792C06E7AF59D1AE1B10A /* DemoScenario.swift in Sources */,
+				A6BFA1628DCFACC62907A871 /* DesignSystem.swift in Sources */,
+				6E54C4B7CA622A6B80F6B138 /* Models.swift in Sources */,
+				ED65B3384A2DD946C08DB505 /* AnalyzeView.swift in Sources */,
+				9DF8B476026C09BCBAC9C6F6 /* CircleView.swift in Sources */,
+				4F8205F764A9663291C57D43 /* HomeView.swift in Sources */,
+				77C9CF2007184BC865C5A283 /* SettingsView.swift in Sources */,
+				7C783DDA9E16E83A6B4A91B0 /* KavachApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCEDF0AEF62150781A367106 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E5BFFA524C66438C9FB8E2 /* ContractTests.swift in Sources */,
+				4DEC4638689834D526D66BB6 /* HTTPAnalysisServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE75686B7C22FC2771EBDD3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD9E10E064EA2E452CA72B4B /* NavigationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		25DACFCD3D0E4D70DF9BEEA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kavach;
+			target = 63852CBF293AFF72CB539C75 /* Kavach */;
+			targetProxy = 11D49BC06012FAA2EC54281A /* PBXContainerItemProxy */;
+		};
+		2A46D5E3E3A01C3310A7D8EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kavach;
+			target = 63852CBF293AFF72CB539C75 /* Kavach */;
+			targetProxy = AC5697B94F881544433CA649 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1EFF4CE6D460747AF0411670 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36EC609929AA6613492ED95D /* App.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(KAVACH_BUNDLE_IDENTIFIER).KavachUITests";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = Kavach;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44AF16C1B2B4FD0E49AC7905 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36EC609929AA6613492ED95D /* App.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L3ZM5X4NF8;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = kavach;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(KAVACH_BUNDLE_IDENTIFIER)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C4966E8896F376BD5B49597E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DE319CCC8D2CF9F55F6169BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36EC609929AA6613492ED95D /* App.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(KAVACH_BUNDLE_IDENTIFIER).KavachTests";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kavach.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kavach";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE9F9FC38C7E715FA9273803 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EBA40367B44CD0B42CA1571C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36EC609929AA6613492ED95D /* App.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L3ZM5X4NF8;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = kavach;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(KAVACH_BUNDLE_IDENTIFIER)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9D640BB236497CA2EF52569 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36EC609929AA6613492ED95D /* App.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(KAVACH_BUNDLE_IDENTIFIER).KavachTests";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kavach.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kavach";
+			};
+			name = Debug;
+		};
+		FEA9FC05D412B3AD085AD4CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36EC609929AA6613492ED95D /* App.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(KAVACH_BUNDLE_IDENTIFIER).KavachUITests";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = Kavach;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4569E03567663D504C8AC074 /* Build configuration list for PBXNativeTarget "KavachUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EFF4CE6D460747AF0411670 /* Release */,
+				FEA9FC05D412B3AD085AD4CD /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7486CB755BFD949607528DD1 /* Build configuration list for PBXProject "Kavach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4966E8896F376BD5B49597E /* Debug */,
+				DE9F9FC38C7E715FA9273803 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E858114322118582C8922349 /* Build configuration list for PBXNativeTarget "KavachTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE319CCC8D2CF9F55F6169BE /* Release */,
+				F9D640BB236497CA2EF52569 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF018FFA33422C10CAE79675 /* Build configuration list for PBXNativeTarget "Kavach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBA40367B44CD0B42CA1571C /* Release */,
+				44AF16C1B2B4FD0E49AC7905 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81B50B90782C90694701B0A2 /* Project object */;
+}

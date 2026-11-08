@@ -1,0 +1,3 @@
+// Local.xcconfig is ignored; it may override these values for your Mac.
+KAVACH_BUNDLE_IDENTIFIER = com.rishthefish.kavach
+#include? "Local.xcconfig"
