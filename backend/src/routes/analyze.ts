@@ -38,7 +38,11 @@ export function analyzeRoutes(analyzer: RiskAnalyzer) {
         return sendError(reply, 400, 'VALIDATION_ERROR', validationMessage(validators.analyzeRequest.errors));
       }
       const req = body as AnalyzeRequest;
-      const result = await analyzer.analyze(req);
+      const result = await analyzer.analyze(req, { log: request.log });
+      // Provider isolation: a result may only carry its own analyzer's source (no relabelling).
+      if (result?.source !== analyzer.provider) {
+        throw new Error('analyzer returned a source that does not match its provider');
+      }
 
       // riskLevel is always derived here, never trusted from the analyzer. Throws on a bad score.
       const assessment: RiskAssessment = {

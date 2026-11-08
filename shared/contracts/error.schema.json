@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://kavach.local/contracts/v0/error.schema.json",
   "title": "ErrorEnvelope",
-  "description": "Body of every non-200 response (contract v0.1.0). Codes used in Module 0: INVALID_JSON (400), VALIDATION_ERROR (400), PAYLOAD_TOO_LARGE (413), UNSUPPORTED_MEDIA_TYPE (415, body is not application/json), NOT_FOUND (404), INTERNAL_ERROR (500). ANALYZER_UNAVAILABLE (503) is reserved for Module 1. Clients should handle unknown codes generically.",
+  "description": "Body of every non-200 response (contract v0.1.0). Codes used in Module 0: INVALID_JSON (400), VALIDATION_ERROR (400), PAYLOAD_TOO_LARGE (413), UNSUPPORTED_MEDIA_TYPE (415, body is not application/json), NOT_FOUND (404), INTERNAL_ERROR (500). ANALYZER_UNAVAILABLE (503) when ANALYSIS_PROVIDER=nvidia cannot produce a validated result (not configured, auth, rate limit, provider error, timeout, invalid model output, busy). Clients should handle unknown codes generically.",
   "type": "object",
   "additionalProperties": false,
   "required": ["error"],

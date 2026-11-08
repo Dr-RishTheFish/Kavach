@@ -101,7 +101,7 @@ describe('POST /api/v1/analyze validation errors', () => {
 });
 
 describe('POST /api/v1/analyze fails safely on analyzer bugs', () => {
-  const broken = (result: unknown): RiskAnalyzer => ({ analyze: async () => result as never });
+  const broken = (result: unknown): RiskAnalyzer => ({ provider: 'mock', analyze: async () => result as never });
 
   it.each([
     ['score out of range', { riskScore: 150, summary: 's', signals: [], recommendedActions: ['a'], source: 'mock', requiresHumanReview: false }],
@@ -114,7 +114,7 @@ describe('POST /api/v1/analyze fails safely on analyzer bugs', () => {
   });
 
   it('analyzer exception -> 500 without a stack trace', async () => {
-    const { app } = makeApp({ analyzer: { analyze: async () => { throw new Error('boom at /secret/path'); } } });
+    const { app } = makeApp({ analyzer: { provider: 'mock', analyze: async () => { throw new Error('boom at /secret/path'); } } });
     const body = expectError(await postAnalyze(app, { kind: 'call', content: 'x' }), 500, 'INTERNAL_ERROR');
     expect(JSON.stringify(body)).not.toMatch(/boom|secret|stack/);
   });

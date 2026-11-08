@@ -89,6 +89,8 @@ const FALLBACK: Omit<Rule, 'id' | 'matches'> = {
 };
 
 export class MockRiskAnalyzer implements RiskAnalyzer {
+  readonly provider = 'mock' as const;
+
   async analyze(request: AnalyzeRequest): Promise<AnalyzerResult> {
     const text = [request.content, request.context ?? ''].join(' ').toLowerCase();
     const rule = RULES.find(r => r.matches(text));

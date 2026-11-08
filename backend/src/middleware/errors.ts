@@ -1,4 +1,5 @@
 import type { FastifyError, FastifyReply, FastifyRequest } from 'fastify';
+import { AnalyzerUnavailableError } from '../risk/RiskAnalyzer.js';
 
 export type ErrorCode =
   | 'INVALID_JSON'
@@ -16,6 +17,10 @@ export function sendError(reply: FastifyReply, status: number, code: ErrorCode, 
 
 /** Maps framework/parser errors to contract codes. Never forwards err.message or stacks. */
 export function errorHandler(err: FastifyError, request: FastifyRequest, reply: FastifyReply) {
+  if ((err as unknown) instanceof AnalyzerUnavailableError) {
+    // The analyzer already logged provider metadata. Never fall back to a mock result.
+    return sendError(reply, 503, 'ANALYZER_UNAVAILABLE', 'The analysis service is temporarily unavailable. Please try again later.');
+  }
   switch (err.code) {
     case 'FST_ERR_CTP_BODY_TOO_LARGE':
       return sendError(reply, 413, 'PAYLOAD_TOO_LARGE', 'The request body is too large.');

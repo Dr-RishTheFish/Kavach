@@ -16,15 +16,62 @@ describe('loadConfig', () => {
     expect(() => loadConfig({ PORT: port })).toThrow(/PORT/);
   });
 
-  it('refuses the nvidia provider until Module 1 implements it', () => {
-    expect(() => loadConfig({ ANALYSIS_PROVIDER: 'nvidia' })).toThrow(/not implemented/i);
+  it.each(['openai', 'NVIDIA ', 'auto'])('rejects an unknown ANALYSIS_PROVIDER %j at startup', provider => {
+    expect(() => loadConfig({ ANALYSIS_PROVIDER: provider })).toThrow(/ANALYSIS_PROVIDER/);
+  });
+
+  it('selects nvidia with server-side settings and the official default endpoint', () => {
+    const cfg = loadConfig({ ANALYSIS_PROVIDER: 'nvidia', NVIDIA_API_KEY: 'nvapi-test', NVIDIA_MODEL: 'vendor/model-x' });
+    expect(cfg.analysisProvider).toBe('nvidia');
+    expect(cfg.nvidia).toEqual({
+      apiKey: 'nvapi-test',
+      model: 'vendor/model-x',
+      baseUrl: 'https://integrate.api.nvidia.com/v1',
+      timeoutMs: 15000,
+      thinking: 'off',
+    });
+  });
+
+  it('accepts NVIDIA_BASE_URL and NVIDIA_TIMEOUT_MS overrides', () => {
+    const cfg = loadConfig({
+      ANALYSIS_PROVIDER: 'nvidia', NVIDIA_API_KEY: 'k', NVIDIA_MODEL: 'm',
+      NVIDIA_BASE_URL: 'https://example.invalid/v1/', NVIDIA_TIMEOUT_MS: '5000',
+    });
+    expect(cfg.nvidia?.baseUrl).toBe('https://example.invalid/v1');
+    expect(cfg.nvidia?.timeoutMs).toBe(5000);
+  });
+
+  it('starts with nvidia selected but unconfigured, so analyze can fail closed with 503', () => {
+    const cfg = loadConfig({ ANALYSIS_PROVIDER: 'nvidia' });
+    expect(cfg.analysisProvider).toBe('nvidia');
+    expect(cfg.nvidia).toMatchObject({ apiKey: '', model: '' });
+  });
+
+  it.each(['0', '-5', 'abc', '120001'])('rejects invalid NVIDIA_TIMEOUT_MS %s', timeout => {
+    expect(() => loadConfig({ ANALYSIS_PROVIDER: 'nvidia', NVIDIA_TIMEOUT_MS: timeout })).toThrow(/NVIDIA_TIMEOUT_MS/);
+  });
+
+  it('rejects a non-https NVIDIA_BASE_URL so the key never travels in plaintext', () => {
+    expect(() => loadConfig({ ANALYSIS_PROVIDER: 'nvidia', NVIDIA_BASE_URL: 'http://integrate.api.nvidia.com/v1' })).toThrow(/NVIDIA_BASE_URL/);
   });
 
   it('never echoes secret env values in errors', () => {
+    let message = '';
     try {
-      loadConfig({ ANALYSIS_PROVIDER: 'nvidia', NVIDIA_API_KEY: 'nvapi-SECRET-123' });
+      loadConfig({ ANALYSIS_PROVIDER: 'nvidia', NVIDIA_API_KEY: 'nvapi-SECRET-123', NVIDIA_TIMEOUT_MS: 'bad' });
     } catch (err) {
-      expect(String(err)).not.toContain('SECRET');
+      message = String(err);
     }
+    expect(message).toMatch(/NVIDIA_TIMEOUT_MS/);
+    expect(message).not.toContain('SECRET');
+  });
+
+  it('accepts NVIDIA_THINKING=default and rejects unknown values', () => {
+    expect(loadConfig({ ANALYSIS_PROVIDER: 'nvidia', NVIDIA_THINKING: 'default' }).nvidia?.thinking).toBe('default');
+    expect(() => loadConfig({ ANALYSIS_PROVIDER: 'nvidia', NVIDIA_THINKING: 'on' })).toThrow(/NVIDIA_THINKING/);
+  });
+
+  it('does not expose nvidia settings when the mock provider is selected', () => {
+    expect(loadConfig({ NVIDIA_API_KEY: 'nvapi-x' }).nvidia).toBeUndefined();
   });
 });
