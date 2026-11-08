@@ -99,12 +99,13 @@ if [ "$API_UP" = 1 ]; then
   fi
 
   if grep -qE "MARKER|2025550199" "$WORK/api.log"; then record FAIL "S1 submitted text found in backend log"; else record PASS "S1 backend log free of submitted text, phone, token"; fi
-  kill "$API_PID" 2>/dev/null; wait "$API_PID" 2>/dev/null; API_PID=""
+  # The backend stays up through L5: the iOS UI test testLiveMockResponseDisclosure needs it on 127.0.0.1:3101.
 fi
 
 # ---------------------------------------------------------------- L5 simulator
 if [ "$WITH_SIM" = 1 ]; then
   step "L5 xcodebuild test on an iOS simulator"
+  [ "$PORT" = 3101 ] || echo "note: testLiveMockResponseDisclosure expects 127.0.0.1:3101 and will skip on port ${PORT}"
   SIM_ID="$(xcrun simctl list devices available 2>/dev/null | grep -m1 -E '^\s+iPhone' | grep -oE '[0-9A-F-]{36}')"
   if [ -z "$SIM_ID" ]; then
     record SKIP "L5 no available iPhone simulator"
@@ -125,6 +126,8 @@ if [ "$WITH_SIM" = 1 ]; then
 else
   record SKIP "L5 simulator tests (pass --with-simulator)"
 fi
+
+if [ -n "$API_PID" ]; then kill "$API_PID" 2>/dev/null; wait "$API_PID" 2>/dev/null; API_PID=""; fi
 
 # ---------------------------------------------------------------- L6 SpacetimeDB
 step "L6 SpacetimeDB module"
