@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "person_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "text": {
+      "type": "string",
+      "maxLength": 8000
+    },
+    "sender_e164": {
+      "type": "string",
+      "pattern": "^(\\+[1-9]\\d{6,14})?$"
+    },
+    "source": {
+      "enum": [
+        "imessage",
+        "share",
+        "app_paste",
+        "screenshot",
+        "call"
+      ]
+    },
+    "reply_to_e164": {
+      "type": "string",
+      "pattern": "^(\\+[1-9]\\d{6,14})?$"
+    },
+    "reply_channel": {
+      "enum": [
+        "",
+        "imessage",
+        "sms",
+        "rcs",
+        "whatsapp"
+      ]
+    },
+    "image_base64": {
+      "type": "string"
+    },
+    "teach_wrapper": {
+      "type": "boolean",
+      "description": "Append the once-a-day tip about starting a forward with \"Forwarded message:\" to the reply"
+    }
+  },
+  "required": [
+    "person_id"
+  ],
+  "additionalProperties": true,
+  "title": "POST /run/scam_check"
+}

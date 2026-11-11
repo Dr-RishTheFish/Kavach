@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppIdentifierPrefix</key>
+	<string>$(AppIdentifierPrefix)</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>$(APP_DISPLAY_NAME)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(APP_DISPLAY_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.hack.kavach.app</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kavach</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>KavachAgentLineNumber</key>
+	<string>$(AGENT_LINE_NUMBER)</string>
+	<key>KavachAgentURL</key>
+	<string>$(AGENT_SERVICE_URL)</string>
+	<key>KavachAppDisplayName</key>
+	<string>$(APP_DISPLAY_NAME)</string>
+	<key>KavachAppGroup</key>
+	<string>$(APP_GROUP_ID)</string>
+	<key>KavachSpacetimeDB</key>
+	<string>$(SPACETIME_DB_NAME)</string>
+	<key>KavachSpacetimeURL</key>
+	<string>$(SPACETIME_URL)</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>NSContactsUsageDescription</key>
+	<string>$(APP_DISPLAY_NAME) shows your family members' photos, keeps their names up to date and suggests family to add. Your address book stays on this phone; only people you add are shared.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Confirm it's really you before answering a family check.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>$(APP_DISPLAY_NAME) connects to its server on your local network to check messages and alert your family.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Choose a screenshot of a message to check it.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Not used.</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>com.hack.kavach.app.companion</string>
+	</array>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchScreen</key>
+	<dict/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+</dict>
+</plist>

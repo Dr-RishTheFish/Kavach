@@ -1,0 +1,19 @@
+# Input rail: classify off-topic requests and answer with a short scope message.
+define flow kavach scope check
+  $on_topic = execute check_scope(text=$user_message)
+  if not $on_topic
+    bot refuse off topic
+    stop
+
+define bot refuse off topic
+  "I can only help with scams and staying safe. Forward me a message you're unsure about, or text help."
+
+# Output rail: never ask for codes or payment, no medical/legal/financial advice.
+define flow kavach output safety
+  $ok = execute check_output_safety(text=$bot_message)
+  if not $ok
+    bot refuse unsafe output
+    stop
+
+define bot refuse unsafe output
+  "I can't send that. Never share codes, PINs, passwords or payment details with anyone."
